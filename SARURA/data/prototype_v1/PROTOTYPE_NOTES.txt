@@ -1,0 +1,17 @@
+RWANDA AGRICULTURAL EXPORT INTELLIGENCE
+PROTOTYPE VERSION 1.0
+
+Source: AI-compiled sample datasets.
+Reporting year: Unknown.
+Official source verification: Pending.
+
+Dataset 1: 49 export records.
+Dataset 2: 19 GDP-impact records.
+Reconciliation: 5 exact, 4 provisional,
+6 description conflicts, 4 unmatched.
+
+All export revenue estimates are hypothetical.
+Market rankings use experimental scoring.
+GVA ratios are unverified assumptions.
+GDP denominators are assumed, not verified.
+Do not use for official reporting or investment decisions.

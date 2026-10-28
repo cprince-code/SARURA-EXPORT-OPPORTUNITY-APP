@@ -1,0 +1,12 @@
+name: SARURA
+title: SARURA
+username: princeshinyprojects
+account: princeshinyprojects
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 18280667
+bundleId:
+url: https://princeshinyprojects.shinyapps.io/SARURA/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
