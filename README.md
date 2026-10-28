@@ -25,13 +25,21 @@ Keep the data/ folder and other project files in their original relative locatio
 Project Structure
 
 SARURA/
+
 ├── app.R
+
 ├── export_engine.R
+
 ├── crop_production_module.R
+
 ├── data/
+
 │   ├── crop_production/
+
 │   └── prototype_v1/
+
 ├── www/
+
 └── README.md
 
 Purpose
