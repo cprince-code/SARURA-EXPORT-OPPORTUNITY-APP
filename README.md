@@ -8,6 +8,7 @@ Features
 - Crop Production: Compare crop production, harvested area, and mean yields across Rwanda's districts using interactive charts and a district-level map.
 - Export Intelligence: Compare potential export destinations based on historical reference prices and export volumes.
 - Illustrative Economic Impact: Estimate hypothetical export revenue and Gross Value Added (GVA) for selected export scenarios.
+  
 Technologies
 - R
 - Shiny
