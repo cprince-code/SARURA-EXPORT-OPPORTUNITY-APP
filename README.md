@@ -3,6 +3,7 @@ SARURA – Rwanda Agricultural Intelligence app
 
 SARURA is an interactive R Shiny application that helps users explore agricultural production across Rwanda and 
 compare potential international export destinations using historical reference data.
+
 Features
 - Overview: Explore key statistics and summaries of the available agricultural and export data.
 - Crop Production: Compare crop production, harvested area, and mean yields across Rwanda's districts using interactive charts and a district-level map.
@@ -43,14 +44,19 @@ SARURA/
 └── README.md
 
 Purpose
+
 SARURA aims to make agricultural information easier to understand and explore, supporting evidence-informed discussion about crop performance and potential export opportunities in Rwanda.
 
 TEAM
+
 -URUJENI BENIGNE
+
 -CYUZUZO MUHOZA PRINCE
 
 Acknowledgements
+
 University of Rwanda: For supporting the project.
+
 NISR: Further Guidance and supporting this project.
 
 
