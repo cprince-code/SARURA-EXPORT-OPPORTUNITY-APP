@@ -309,7 +309,7 @@ server <- function(input,output,session) {
       ifelse(shape$is_leader, " (highest mean yield)", "")
     )
     
-    # Deliberately omit third-party map tiles: they can show an
+    
     
     bounds <- sf::st_bbox(shape)
     leaflet::leaflet(shape,
