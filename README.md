@@ -14,6 +14,7 @@ Technologies
 - Shiny
 - Plotly
 - Interactive mapping and data visualization tools
+
 Running the Application
 1. Install R and RStudio.
 2. Clone or download this repository.
@@ -22,6 +23,7 @@ Running the Application
    shiny::runApp()
 Keep the data/ folder and other project files in their original relative locations.
 Project Structure
+
 SARURA/
 ├── app.R
 ├── export_engine.R
