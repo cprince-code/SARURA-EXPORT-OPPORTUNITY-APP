@@ -16,9 +16,7 @@ source("crop_production_module.R", local = TRUE)
 crop_path <- if (file.exists("data/crop_production/agriculture_season_A_2026_clean.csv")) {
   "data/crop_production/agriculture_season_A_2026_clean.csv"
 } else "agriculture_season_A_2026_clean.csv"
-# Rwanda district boundaries: use a local GeoJSON if available; otherwise
-# geodata downloads GADM level-2 boundaries once and caches them locally.
-# Boundaries are external geographic reference data, not crop observations.
+# Rwanda district boundaries.
 load_rwanda_districts <- function() {
   local_path <- "data/maps/rwanda_districts.geojson"
   if (file.exists(local_path)) {
@@ -43,7 +41,7 @@ normalize_district <- function(x) {
 }
 
 if (!is.null(rwanda_districts)) {
-  # GADM uses NAME_2 for Rwanda district names.
+
   name_col <- intersect(c("NAME_2", "District", "district", "NAME_1"),
                         names(rwanda_districts))
   if (length(name_col) == 0) {
@@ -312,7 +310,7 @@ server <- function(input,output,session) {
     )
     
     # Deliberately omit third-party map tiles: they can show an
-    # "API KEY REQUIRED" watermark. District polygons need no tile API key.
+    
     bounds <- sf::st_bbox(shape)
     leaflet::leaflet(shape,
                      options = leaflet::leafletOptions(zoomControl = TRUE,
@@ -385,7 +383,7 @@ server <- function(input,output,session) {
       summarise(yield=mean(Yield_Kg_Ha,na.rm=TRUE),.groups="drop") %>%
       filter(is.finite(yield)) %>% arrange(yield)
     validate(need(nrow(d)>0,"No valid district yield data for these filters."))
-    # A categorical profile, NOT a historical time-series.
+    
     d$District <- factor(d$District, levels=d$District)
     p <- plot_ly(d,x=~District,y=~yield,type="scatter",mode="lines+markers",
                  line=list(color="#b69aff",width=3),marker=list(color="#ffc67e",size=9),
