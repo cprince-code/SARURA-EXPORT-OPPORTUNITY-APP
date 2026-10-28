@@ -1,4 +1,4 @@
-You can access the live app here:# https://princeshinyprojects.shinyapps.io/SARURA/
+# https://princeshinyprojects.shinyapps.io/SARURA/
 SARURA – Rwanda Agricultural Intelligence app
 
 SARURA is an interactive R Shiny application that helps users explore agricultural production across Rwanda and 
