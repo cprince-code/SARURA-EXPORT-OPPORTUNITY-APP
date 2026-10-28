@@ -1,12 +1,9 @@
 
 # ===================================================
 # RWANDA AGRICULTURAL EXPORT INTELLIGENCE
-# EXPORT ENGINE - PROTOTYPE VERSION 1.0
 # ===================================================
 
 library(dplyr)
-
-# STEP 1 - LOAD FROZEN DATASETS
 
 exports_clean <- readRDS(
   "data/prototype_v1/exports_v1.rds"
@@ -24,13 +21,8 @@ reconciliation_final <- readRDS(
   "data/prototype_v1/reconciliation_v1.rds"
 )
 
-# STEP 2 - DEFINE ILLUSTRATIVE GDP ASSUMPTIONS
-
 assumed_agri_gdp <- 3500000000
 assumed_national_gdp <- 14000000000
-
-
-# STEP 3 - MARKET RECOMMENDATION FUNCTION
 
 recommend_export_advanced <- function(
     product_name,
@@ -107,9 +99,6 @@ recommend_export_advanced <- function(
     )
 }
 
-
-# STEP 4 - INTEGRATED EXPORT ANALYSIS
-
 analyze_export_opportunities <- function(
     product_name,
     quantity_kg
@@ -159,12 +148,9 @@ analyze_export_opportunities <- function(
     )
 }
 
-
-# STEP 5 - FORMAT RESULTS FOR THE APPLICATION
-
 format_export_results <- function(results) {
   
-  # Format monetary values
+  
   format_usd <- function(x) {
     
     formatted <- ifelse(
@@ -185,7 +171,6 @@ format_export_results <- function(results) {
     return(formatted)
   }
   
-  # Format percentages
   format_percentage <- function(x) {
     
     formatted <- ifelse(
@@ -200,7 +185,7 @@ format_export_results <- function(results) {
     return(formatted)
   }
   
-  # Format historical quantities
+  
   format_quantity <- function(x) {
     
     ifelse(
@@ -215,7 +200,7 @@ format_export_results <- function(results) {
     )
   }
   
-  # Format recommendation scores
+  
   format_score <- function(x) {
     
     ifelse(
@@ -228,7 +213,7 @@ format_export_results <- function(results) {
     )
   }
   
-  # Produce a user-friendly results table
+ 
   results %>%
     transmute(
       Rank = rank,
@@ -272,7 +257,7 @@ format_export_results <- function(results) {
 }
 
 
-# STEP 6 - PROTOTYPE DATA-QUALITY INFORMATION
+
 
 get_prototype_warnings <- function() {
   
@@ -315,7 +300,7 @@ get_prototype_warnings <- function() {
 }
 
 
-# STEP 7 - ENGINE STATUS
+
 
 cat("\nEXPORT ENGINE LOADED SUCCESSFULLY\n")
 
